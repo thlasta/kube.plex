@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  volumeName: plexserver-conf-pv
+  volumeName: plexserver-config-pv
