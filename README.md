@@ -24,6 +24,5 @@ git commit -m "Änderungsbeschreibung"
 git push --all
 
 # Jump one folder up, and apply to the whole folder:
-kubectl apply -f plexserver/
-
+kubectl apply -f plex/
 
