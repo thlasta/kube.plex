@@ -13,4 +13,4 @@ spec:
     server: 192.168.0.2
     path: "/volume1/filme_1/"
   mountOptions:
-    - nfsvers=4.2
+    - nfsvers=4.0

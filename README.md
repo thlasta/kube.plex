@@ -11,7 +11,7 @@ git push -u origin main
 # Namespace**
 # We are going to isolate all the Kubernetes objects related to Pi-Hole in the namespace pihole.
 # To create a namespace, run the following command:
-$ kubectl create namespace plexserver
+kubectl create namespace plexserver
 
 # Repo clonen
 git clone git@github.com:thlasta/kube.plex.git
