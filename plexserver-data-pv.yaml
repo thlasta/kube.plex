@@ -10,7 +10,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 192.168.0.2
-    path: "/volume2/filme_1/"
+    server: 192.168.0.144
+    path: "/mnt/usb/volume/1/share/kubernetes/plex/data/"
   mountOptions:
-    - nfsvers=4.0
+    - nfsvers=4.2
