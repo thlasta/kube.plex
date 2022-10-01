@@ -11,6 +11,6 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.0.2
-    path: "/volume1/filme_1/"
+    path: "/volume2/filme_1/"
   mountOptions:
     - nfsvers=4.0
