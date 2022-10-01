@@ -8,6 +8,7 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.0.144
     path: "/mnt/usb/volume/1/share/kubernetes/plex/config/"
