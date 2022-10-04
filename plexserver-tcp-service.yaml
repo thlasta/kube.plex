@@ -25,4 +25,4 @@ spec:
       name: dlna-tcp
       protocol: TCP
   type: LoadBalancer
-  loadBalancerIP: 192.168.0.144  # < IP to access your plexserver. Should be one from the MetalLB range and the same as the TCP yaml
+  loadBalancerIP: 192.168.0.143  # < IP to access your plexserver. Should be one from the MetalLB range and the same as the TCP yaml
