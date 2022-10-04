@@ -12,16 +12,14 @@ metadata:
     nginx.ingress.kubernetes.io/app-root: /web             # < the root directory of the plex webserver
 spec:
   rules:
-    - host: plexserver.hlasta.de
+    - host: plexserver.hlasta.home
       http:
         paths:
           - path: /
             pathType: ImplementationSpecific
             backend:
-              serviceName: plex-tcp
-              servicePort: pms-web   # < same label as the port in the service tcp file
-  tls: # < placing a host in the TLS config will indicate a cert should be created
-    - hosts:
-        - plexserver.hlasta.home
-      secretName: plexserver.hlasta.de-tls # < cert-manager will store the created certificate in this secret.
+              service:
+                name: plex-tcp
+                port:
+                  name: 32400
 
