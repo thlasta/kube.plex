@@ -21,7 +21,8 @@ spec:
           averageUtilization: 50
     - type: Pods
       pods:
-        name: cpu
+        metric:
+          name: cpu
         target:
           type: Utilization
           averageUtilization: 50
