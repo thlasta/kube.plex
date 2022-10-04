@@ -10,7 +10,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: plexserver
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
     - type: Resource
@@ -18,7 +18,13 @@ spec:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: 75
+          averageUtilization: 50
+    - type: Pods
+      pods:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
 status:
   observedGeneration: 1
   #  lastScaleTime: <some recent time>
