@@ -21,7 +21,7 @@ spec:
               service:
                 name: plex-tcp
                 port:
-                  number: 8081
+                  number: 32400
   tls: # < placing a host in the TLS config will indicate a cert should be created
     - hosts:
         - plexserver.hlasta.home
