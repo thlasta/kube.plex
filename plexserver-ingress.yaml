@@ -21,7 +21,7 @@ spec:
               service:
                 name: plex-svc
                 port:
-                  number: 80
+                  number: 8081
   tls: # < placing a host in the TLS config will indicate a cert should be created
     - hosts:
         - plexserver.hlasta.home

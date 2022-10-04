@@ -10,5 +10,5 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 1Ti
+      storage: 100Gi
   volumeName: plexserver-data-pv
