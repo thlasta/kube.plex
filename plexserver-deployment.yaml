@@ -77,7 +77,7 @@ spec:
               protocol: UDP
           resources:
             limits:
-              cpu: '4'
+              cpu: '3'
               memory: '3584Mi'
             requests:
               cpu: '1'
