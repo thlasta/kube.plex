@@ -29,5 +29,5 @@ status:
       resource:
         name: cpu
         current:
-          averageUtilization: 0
-          averageValue: 0
+          averageUtilization: 25
+          averageValue: 25
