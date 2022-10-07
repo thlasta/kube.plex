@@ -11,7 +11,7 @@ spec:
     kind: Deployment
     name: plexserver
   minReplicas: 1
-  maxReplicas: 1
+  maxReplicas: 7
   metrics:
     - type: Resource
       resource:
