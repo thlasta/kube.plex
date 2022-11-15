@@ -3,12 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: plexserver-data-pvc
   namespace: plexserver
-spec:
+pec:
   accessModes:
     - ReadWriteMany
-  volumeMode: Filesystem
-  storageClassName: ""
+  storageClassName: nfs-storageclass
   resources:
     requests:
       storage: 100Gi
-  volumeName: plexserver-data-pv
