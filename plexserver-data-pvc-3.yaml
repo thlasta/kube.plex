@@ -5,7 +5,7 @@ metadata:
   namespace: plexserver
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadOnlyMany
   storageClassName: ""
   resources:
     requests:
