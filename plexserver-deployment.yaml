@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: plexserver               # < label for tagging and reference
-  name: plexserver                # < name of the deployment
+  name: plexserver-deployment     # < name of the deployment
   namespace: plexserver           # < namespace where to place the deployment and pods               # < namespace where place the deployment and pods
 spec:
   replicas: 1                     # < number of pods to deploy
