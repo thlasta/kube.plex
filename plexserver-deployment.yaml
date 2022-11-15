@@ -22,6 +22,8 @@ spec:
         app: plexserver
         tier: backend
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: "hlasta-pi-140","hlasta-pi-141","hlasta-pi-142","hlasta-pi-143","hlasta-pi-145","hlasta-pi-145"
       volumes:
         - name: nfs-plex-config     # < linkname of the volume for the pvc
           persistentVolumeClaim:
