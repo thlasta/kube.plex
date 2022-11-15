@@ -35,9 +35,12 @@ spec:
         - name: nfs-plex-config     # < linkname of the volume for the pvc
           persistentVolumeClaim:
             claimName: plexserver-config-pvc  # < pvc name we created in the previous yaml
-        - name: nfs-data
+        - name: nfs-data-1
           persistentVolumeClaim:
-            claimName: plexserver-data-pvc
+            claimName: plexserver-data-pvc-1
+        - name: nfs-data-3
+          persistentVolumeClaim:
+            claimName: plexserver-data-pvc-3
       containers:
         - env:                       # < environment variables. See https://hub.docker.com/r/linuxserver/plex
             - name: PLEX_CLAIM
@@ -96,6 +99,8 @@ spec:
           volumeMounts:            # < the volume mount in the container. Look at the relation volumelabel->pvc->pv
             - mountPath: /config     # < mount location in the container
               name: nfs-plex-config  # < volumelabel configured earlier in the yaml file
-            - mountPath: /data
-              name: nfs-data
+            - mountPath: /data_1
+              name: nfs-data-1
+            - mountPath: /data_3
+              name: nfs-data-3
       restartPolicy: Always
