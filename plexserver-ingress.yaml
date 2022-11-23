@@ -6,7 +6,9 @@ metadata:
   labels:
     app: plexserver
   annotations:
+    kubernetes.io/ingress.class: "nginx"  # < use the nginx ingress controller
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"  # < communicate in https with the backend (service/pod)
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"     # < use letsencrypt-prod application in kubernetes to generate ssl certificate
     nginx.ingress.kubernetes.io/app-root: /web             # < the root directory of the plex webserver
 spec:
   ingressClassName: nginx
@@ -14,7 +16,7 @@ spec:
     - host: plexserver.hlasta.home
       http:
         paths:
-          - path: /web
+          - path: /
             pathType: ImplementationSpecific
             backend:
               service:
