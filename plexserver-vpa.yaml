@@ -1,0 +1,21 @@
+apiVersion: autoscaling.k8s.io/v1beta2
+kind: VerticalPodAutoscaler
+metadata:
+  name: plexserver-vpa
+  namespace: plexserver
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: plexserver
+  updatePolicy:
+    updateMode: "Auto"
+  resourcePolicy:
+    containerPolicies:
+      - containerName: "plexserver"
+        minAllowed:
+          cpu: "250m"
+          memory: "500Mi"
+        maxAllowed:
+          cpu: "3000m"
+          memory: "3000Mi"

@@ -92,7 +92,7 @@ spec:
               cpu: '3'
               memory: 3000M
             requests:
-              cpu: '1'
+              cpu: '250m'
               memory: 500M
           stdin: true
           tty: true
