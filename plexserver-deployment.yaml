@@ -54,7 +54,7 @@ spec:
             - name: TZ
               value: Europe/Amsterdam  # < Timezone
           image: ghcr.io/linuxserver/plex   # < the name of the docker image we will use
-          imagePullPolicy: Always    # < always use the latest image when creating container/pod
+          imagePullPolicy: IfNotPresent    # < always use the latest image when creating container/pod
           name: plexserver           # < name of container
           ports:
             - containerPort: 32400     # < required network portnumber. See https://hub.docker.com/r/linuxserver/plex
